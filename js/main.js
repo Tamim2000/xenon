@@ -77,8 +77,5 @@ $('.content-wrapper').slick({
 $('.video').magnificPopup({type:'iframe',
 });
 
-  AOS.init();
-
-
 
   });
