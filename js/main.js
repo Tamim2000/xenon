@@ -49,7 +49,6 @@ $('.water').ripples({
     
   });
  
-
 // magnific image Popup
     $('.image-popup').magnificPopup({type:'image',
     gallery:{
@@ -63,7 +62,6 @@ $('.water').ripples({
         time: 2000
     });
 
-
 // testimonia slider
 $('.content-wrapper').slick({
     prevArrow:'<button type="button" class="slick-prev"><i class="fas fa-long-arrow-alt-left"></i></button>',
@@ -72,10 +70,8 @@ $('.content-wrapper').slick({
     autoplay: true,
     autoplaySpeed: 1000,
 }); 
-
 // magnific video Popup
 $('.video').magnificPopup({type:'iframe',
 });
-
-
+  
   });
