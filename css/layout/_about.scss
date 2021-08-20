@@ -1,0 +1,49 @@
+/***** about section ******/
+.about-area{
+    .about-img img{
+        animation: imgMove 7s linear infinite;
+    }
+    h2{
+        color: $heading-color;
+        font-size: 32px;
+        font-weight: 700;
+    }
+    h4{
+        font-size: 20px;
+        font-weight: 600;
+        color: $black;
+    }
+    ul{
+        margin-bottom: 30px;
+        li{
+            i{
+                color: $primary-color;
+                margin-right: 10px;
+            }
+        }
+    }
+    .btn{
+        margin-top: 20px;
+        &:hover{
+            border-color: $btn-bg;
+        }
+    }
+}
+
+@keyframes imgMove{
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(-60px);
+    }
+    50%{
+        transform: translateX( 0px);
+    }
+    75%{
+        transform: translateX(60px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}

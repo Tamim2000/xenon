@@ -1,0 +1,28 @@
+/****Priching section****/
+.priching-area{
+    padding: 100px 0px;
+    background: $bg-gray;
+
+    .single-price{
+        background: $white;
+        padding: 30px;
+        text-align: center;
+        border: 3px solid transparent;
+        transition: .3s;
+        &:hover{
+            border-color:$primary-color;
+        }
+        h2{
+            font-size: 28px;
+            margin: 10px 0px;
+        }
+       ul li {
+            color: $peragraph-color;
+            margin: 10px 0px;
+            border-bottom: .5px solid rgba(209, 209, 209, 0.582);
+        }
+    }
+    .btn:hover{
+        border-color: $primary-color;
+    }
+}

@@ -1,0 +1,195 @@
+
+@import 'variable';
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img{
+    max-width:100%;
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
+    font-size: 16px;
+}
+.loader-bg{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 99999;
+    background: $white;
+}
+.loader{
+    border: 0 solid transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+    &::before ,  &::after{
+        content: '';
+        border: 2em solid $primary-color;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: inherit;
+        height: inherit;
+        animation: loader 2s linear infinite;
+        opacity: 0;
+    
+    }
+}
+.loader::before{
+    animation-delay: .5s;
+}
+@keyframes loader{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+/***** flex css******/
+$flex: flex,inline-flex;
+@each $i in $flex {
+    .d-#{$i}{
+        display: $i;
+    }
+}
+
+$justify:center,start,evenly ,space-around,space-between;
+@each $i in $justify{
+    .justify-content-#{$i}{
+        justify-content: $i;
+    }
+}
+.justify-content-end{
+    justify-content: flex-end;
+}
+
+
+$align-items:center,start ,end ,stretch ,baseline;
+@each $i in $align-items{
+    .align-items-#{$i}{
+        align-items:$i;
+    }
+}
+$text:center,left ,right;
+@each $i in $text{
+    .text-#{$i}{
+        text-align:$i;
+    }
+}
+/******background image css***/
+.bg{
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index:1;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        z-index: 1;
+        opacity: .7;
+    }
+}
+/**** css margin padding***/
+@for $i from 1 to 10 {
+ .mt-#{$i * 10}{
+     margin-top: $i * 10px;
+ }    
+}
+@for $i from 1 to 10 {
+ .mb-#{$i * 10}{
+     margin-bottom: $i * 10px;
+ }    
+}
+@for $i from 1 to 10 {
+ .pt-#{$i * 10}{
+     padding-top: $i * 10px;
+ }    
+}
+@for $i from 1 to 10 {
+ .pb-#{$i * 10}{
+     padding-bottom: $i * 10px;
+ }    
+}
+/****section title*****/
+.section-title{
+    margin-bottom: 50px;
+    text-align: center;
+    h2{
+        position: relative;
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+        &::before{
+            position: absolute;
+            content: '';
+            background:$primary-color;
+            width: 80px;
+            height: 2px;
+            bottom: 0;
+            left: 45%;
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            background:$primary-color;
+            width: 10px;
+            height: 10px;
+            bottom: -4px;
+            left: 48.1%;
+            border-radius: 50%;
+        }
+    }
+    h4{
+        color: $black;
+        font-weight: 500;
+    }
+}
+
+/****button css******/
+.btn{
+    position: relative;
+    border: 2px solid transparent;
+    line-height: 25px;
+    border-radius: 3px;
+    color: $btn-color;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: .3s;
+    &.btn-primary{
+        background: $primary-color;
+    }
+    &.btn-border{
+        border-color: $btn-bg;
+    }
+    &:hover{
+        border-color: transparent;
+        background: $btn-hover-bg;
+        color: $btn-hover-color;
+    }
+}
+

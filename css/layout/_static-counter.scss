@@ -1,0 +1,26 @@
+.static-counter{
+    background:$dark;
+    padding: 80px 0px;
+    .section-title{
+        color: $white;
+        h4{
+            color:$peragraph-color;
+        }
+    }
+    .counter-item{
+        i{
+            padding: 15px;
+            font-size: 23px;
+            color: $white;
+            background: $primary-color;
+        }
+        h2{
+            font-size:29px;
+            color: $white;
+            margin: 15px 0px;
+        }
+        span{
+            color: $peragraph-color;
+        }
+    }
+}
